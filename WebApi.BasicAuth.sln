@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.BasicAuth", "WebApi.BasicAuth\WebApi.BasicAuth.csproj", "{AA85E181-5550-4C57-A825-73E11CB9174C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{06AB9AEA-6988-474C-AEE4-044693930286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{AE3A7656-A03B-4AFB-9C33-AE5452E48A0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA85E181-5550-4C57-A825-73E11CB9174C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA85E181-5550-4C57-A825-73E11CB9174C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA85E181-5550-4C57-A825-73E11CB9174C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA85E181-5550-4C57-A825-73E11CB9174C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06AB9AEA-6988-474C-AEE4-044693930286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06AB9AEA-6988-474C-AEE4-044693930286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06AB9AEA-6988-474C-AEE4-044693930286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06AB9AEA-6988-474C-AEE4-044693930286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3A7656-A03B-4AFB-9C33-AE5452E48A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3A7656-A03B-4AFB-9C33-AE5452E48A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3A7656-A03B-4AFB-9C33-AE5452E48A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3A7656-A03B-4AFB-9C33-AE5452E48A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

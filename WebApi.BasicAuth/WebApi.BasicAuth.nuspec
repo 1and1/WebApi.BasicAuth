@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>WebApi.BasicAuth</id>
+		<version>$version$</version>
+		<authors>Bastian Eicher</authors>
+		<copyright>1&amp;1 Internet SE</copyright>
+		<projectUrl>https://github.com/1and1/WebApi.BasicAuth</projectUrl>
+		<description>WebApi.BasicAuth provides HTTP Basic Authentication with usernames and passwords stored in Web.config.</description>
+		<summary>HTTP Basic Authentication with usernames and passwords stored in Web.config</summary>
+		<tags>WebAPI HTTP Link Header</tags>
+	</metadata>
+</package>
