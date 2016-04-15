@@ -13,6 +13,9 @@ namespace WebApi.BasicAuth
         [ConfigurationProperty("password", IsRequired = true)]
         public string Password => (string)base["password"];
 
+        [ConfigurationProperty("hashAlgorithm", IsRequired = false)]
+        public string HashAlgorithm => (string)base["hashAlgorithm"];
+
         [ConfigurationProperty("roles", IsRequired = true)]
         [ConfigurationCollection(typeof(RoleCollection), CollectionType = ConfigurationElementCollectionType.BasicMapAlternate, AddItemName = "role")]
         public RoleCollection Roles => (RoleCollection)base["roles"];

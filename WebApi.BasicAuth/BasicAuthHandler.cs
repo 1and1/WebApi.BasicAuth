@@ -1,8 +1,13 @@
 ﻿using System;
+using System.Configuration;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Policy;
 using System.Security.Principal;
 using System.Text;
 using System.Threading;
@@ -32,12 +37,25 @@ namespace WebApi.BasicAuth
             var credentials = ParseAuthentication(request.Headers.Authorization);
             if (credentials != null)
             {
-                var matchingUser = _config.Users.OfType<User>().FirstOrDefault(x =>
-                    x.Username.Equals(credentials.UserName, StringComparison.OrdinalIgnoreCase) &&
-                    x.Password == credentials.Password);
-                if (matchingUser != null)
+                var user = _config.Users.OfType<User>().FirstOrDefault(x =>
+                    x.Username.Equals(credentials.UserName, StringComparison.InvariantCultureIgnoreCase));
+                if (user != null)
                 {
-                    SetPrincipal(request, matchingUser);
+                    if (string.IsNullOrEmpty(user.HashAlgorithm))
+                    {
+                        if (credentials.Password == user.Password)
+                            SetPrincipal(request, user);
+                    }
+                    else
+                    {
+                        var algo = HashAlgorithm.Create(user.HashAlgorithm);
+                        if (algo == null)
+                            throw new ConfigurationErrorsException($"No known hash algorithm called {user.HashAlgorithm}.");
+
+                        string hashedPassword = BitConverter.ToString(algo.ComputeHash(Encoding.UTF8.GetBytes(credentials.Password))).Replace("-", "");
+                        if (hashedPassword == user.Password.ToUpperInvariant())
+                            SetPrincipal(request, user);
+                    }
                 }
             }
 
