@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Configuration;
-using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Security.Policy;
 using System.Security.Principal;
 using System.Text;
 using System.Threading;
