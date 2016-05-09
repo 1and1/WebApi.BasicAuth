@@ -1,13 +1,17 @@
 ﻿using System.Web.Http;
+using WebApi.BasicAuth;
 
-namespace WebApi.BasicAuth.Sample
+namespace BasicAuthSample
 {
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
             config.MapHttpAttributeRoutes();
+
             config.EnableBasicAuth();
+
+            config.EnsureInitialized();
         }
     }
 }

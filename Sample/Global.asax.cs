@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace WebApi.BasicAuth.Sample
+namespace BasicAuthSample
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

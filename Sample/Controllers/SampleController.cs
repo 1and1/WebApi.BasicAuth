@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace WebApi.BasicAuth.Sample.Controllers
+namespace BasicAuthSample.Controllers
 {
     public class SampleController : ApiController
     {
