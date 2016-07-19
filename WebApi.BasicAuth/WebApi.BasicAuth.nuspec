@@ -8,6 +8,6 @@
 		<projectUrl>https://github.com/1and1/WebApi.BasicAuth</projectUrl>
 		<description>WebApi.BasicAuth provides HTTP Basic Authentication with usernames and passwords stored in Web.config.</description>
 		<summary>HTTP Basic Authentication with usernames and passwords stored in Web.config</summary>
-		<tags>WebAPI HTTP Link Header</tags>
+		<tags>WebAPI HTTP Basic Authentication</tags>
 	</metadata>
 </package>
