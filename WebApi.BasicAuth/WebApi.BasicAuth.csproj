@@ -58,8 +58,9 @@
   <ItemGroup>
     <Compile Include="..\GlobalAssemblyInfo.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="BasicAuthChallengeResult.cs" />
     <Compile Include="BasicAuthSection.cs" />
-    <Compile Include="BasicAuthHandler.cs" />
+    <Compile Include="BasicAuthFilter.cs" />
     <Compile Include="HttpConfigurationExtensions.cs" />
     <Compile Include="RoleCollection.cs" />
     <Compile Include="Role.cs" />

@@ -11,7 +11,7 @@ namespace WebApi.BasicAuth
         {
             var basicAuthConfig = BasicAuthSection.Load();
             if (basicAuthConfig != null)
-                configuration.MessageHandlers.Add(new BasicAuthHandler(basicAuthConfig));
+                configuration.Filters.Add(new BasicAuthFilter(basicAuthConfig));
             return configuration;
         }
     }
