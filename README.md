@@ -14,11 +14,15 @@ NuGet package:
 ```xml
 <configuration>
   <configSections>
-    <section name="basicAuth" type="WebApi.BasicAuth.BasicAuthSection" />
+    <section name="basicAuth" type="WebApi.BasicAuth.BasicAuthSection, WebApi.BasicAuth" />
   </configSections>
   <basicAuth>
     <users>
-      <user username="JohnDoe" password="abc"/>
+      <user username="JohnDoe" password="ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad" hashAlgorithm="sha256">
+        <roles>
+          <role name="Operator"/>
+        </roles>
+      </user>
       <user username="JaneDoe" password="abc">
         <roles>
           <role name="Operator"/>
